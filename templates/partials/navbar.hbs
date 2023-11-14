@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.documentElement.scrollTop > 120) {
+    document.getElementById("navbar").style.top = "0%";
+    document.getElementById('navbar').style.background="#023564"
+    document.getElementById('bt').style.color="#fff"
+    const anch = document.querySelectorAll("#bt1");
+    anch.forEach(anch => {
+  anch.style.color = "#fff";
+})
+  } 
+  else{
+    document.getElementById("navbar").style.top = "2%";
+    document.getElementById('navbar').style.background="#f1f1f1"
+    document.getElementById('bt').style.color="black"
+    const anch = document.querySelectorAll("#bt1");
+    anch.forEach(anch => {
+  anch.style.color = "black";
+})
+  }
+}  
+
+
+    </script>
+    {{>header}}
+    <title>Navbar</title>
+</head>
+<body>
+  <div class="container">
+ <div class="row">
+    <div class="col-lg-10">
+           <nav id="navbar" class="navbar navbar-expand-md fixed-top" aria-label="Fifth navbar example">
+    <div class="container-fluid">
+      <a id="bt" class="navbar-brand" href="/">NODE.JS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a   id="bt1" class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a  id="bt1" class="nav-link" href="login">Login</a>
+          </li>
+           <li class="nav-item">
+            <a  id="bt1" class="nav-link" href="registration">Registration</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    </div>
+ </div>
+  </div>
+</body>
+</html>
